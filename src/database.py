@@ -11,5 +11,23 @@ from src.models.audit_log import AuditLog
 from src.models.report import Report
 
 async def init_db():
-    client = AsyncIOMotorClient(MONGODB_URL)
-    await init_beanie(database=client.ap_ar_db, document_models=[User, Invoice, Chat, Customer, Vendor, Payment, AuditLog, Report])
+    try:
+        client = AsyncIOMotorClient(MONGODB_URL)
+        
+        await init_beanie(
+            database=client.ap_ar_db,  # Use attribute access, not dict access
+            document_models=[
+                User,
+                Invoice,
+                Chat,
+                Customer,
+                Vendor,
+                Payment,
+                AuditLog,
+                Report,
+            ]
+        )
+        print("Database connected successfully")
+    except Exception as e:
+        print(f"DEBUG: Connection failed with error: {e}")
+        raise e

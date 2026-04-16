@@ -10,7 +10,7 @@ anyio==4.13.0
 argcomplete==3.6.3
 attrs==26.1.0
 Authlib==1.6.10
-beanie==2.1.0
+beanie==1.26.0
 beartype==0.22.9
 boto3==1.42.89
 botocore==1.42.89
@@ -65,7 +65,7 @@ jsonschema==4.26.0
 jsonschema-path==0.4.5
 jsonschema-specifications==2025.9.1
 keyring==25.7.0
-lazy-model==0.4.0
+lazy-model==0.2.0
 logfire==4.32.1
 logfire-api==4.32.1
 markdown-it-py==4.0.0
@@ -131,6 +131,7 @@ temporalio==1.26.0
 tenacity==9.1.4
 tiktoken==0.12.0
 tokenizers==0.22.2
+toml==0.10.2
 tqdm==4.67.3
 typer==0.24.1
 types-protobuf==6.32.1.20260221
