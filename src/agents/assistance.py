@@ -8,7 +8,7 @@ os.environ['ANTHROPIC_API_KEY'] = ANTHROPIC_API_KEY
 # 2. Define the Agent once at the top level
 # PydanticAI handles the 'client', 'messages', and 'max_tokens' for you
 assistant_agent = Agent(
-    'anthropic:claude-3-5-sonnet-latest',
+    'anthropic:claude-sonnet-4-5',
     system_prompt="You are a professional AR/AP Assistant. Help users with invoice queries.",
 )
 
@@ -19,6 +19,6 @@ class AssistantAgent:
             # We use the assistant_agent we defined above
             # result.data will contain the clean text response
             result = await assistant_agent.run(message)
-            return result.data
+            return result.output
         except Exception as e:
             return f"Claude API Error: {str(e)}"
