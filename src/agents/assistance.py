@@ -1,5 +1,5 @@
 from pydantic_ai import Agent
-from dependencies import ANTHROPIC_API_KEY
+from src.dependencies import ANTHROPIC_API_KEY
 import os
 
 # 1. Set the environment variable so PydanticAI can find your key automatically

@@ -1,5 +1,5 @@
 import openai
-from dependencies import DEEPSEEK_API_KEY
+from src.dependencies import DEEPSEEK_API_KEY
 
 class AuditorAgent:
     def __init__(self):

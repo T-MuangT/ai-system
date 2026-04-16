@@ -1,19 +1,19 @@
 from fastapi import FastAPI, Body, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from database import init_db
-from agents.assistance import AssistantAgent
-from agents.auditor import AuditorAgent
-from models.invoice import Invoice
-from models.user import User
-from models.chat import Chat, ChatMessage
-from models.customer import Customer
-from models.vendor import Vendor
-from models.payment import Payment
-from models.audit_log import AuditLog
-from models.report import Report
 from datetime import datetime
 from typing import List, Optional
 from pydantic import BaseModel
+from src.database import init_db
+from src.agents.assistance import AssistantAgent
+from src.agents.auditor import AuditorAgent
+from src.models.invoice import Invoice
+from src.models.user import User
+from src.models.chat import Chat, ChatMessage
+from src.models.customer import Customer
+from src.models.vendor import Vendor
+from src.models.payment import Payment
+from src.models.audit_log import AuditLog
+from src.models.report import Report
 
 app = FastAPI()
 
