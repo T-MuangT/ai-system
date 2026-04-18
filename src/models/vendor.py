@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Optional
 
 class Vendor(Document):
+    vendor_id: str
     name: str
     email: str
     phone: Optional[str] = None

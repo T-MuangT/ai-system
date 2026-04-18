@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Optional
 
 class Payment(Document):
+    payment_id: str
     invoice_id: str
     amount: float
     payment_date: datetime

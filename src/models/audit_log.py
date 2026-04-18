@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Optional
 
 class AuditLog(Document):
+    log_id: str
     user_id: str
     action: str  # "login", "create_invoice", "approve_invoice", etc.
     resource_type: str  # "invoice", "payment", "user", etc.

@@ -4,7 +4,7 @@ from src.dependencies import MONGODB_URL
 from src.models.user import User
 from src.models.invoice import Invoice
 from src.models.chat import Chat
-from src.models.customer import Customer
+from src.models.supplier import Supplier
 from src.models.vendor import Vendor
 from src.models.payment import Payment
 from src.models.audit_log import AuditLog
@@ -20,7 +20,7 @@ async def init_db():
                 User,
                 Invoice,
                 Chat,
-                Customer,
+                Supplier,
                 Vendor,
                 Payment,
                 AuditLog,

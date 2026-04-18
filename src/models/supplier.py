@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import Optional
 
-class Customer(Document):
+class Supplier(Document):
+    supplier_id: str
     name: str
     email: str
     phone: Optional[str] = None
@@ -11,4 +12,4 @@ class Customer(Document):
     created_at: datetime = datetime.utcnow()
 
     class Settings:
-        name = "customers"
+        name = "suppliers"
